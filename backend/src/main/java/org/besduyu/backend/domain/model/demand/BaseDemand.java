@@ -1,4 +1,4 @@
-package org.besduyu.backend.domain.model.source;
+package org.besduyu.backend.domain.model.demand;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,8 +6,8 @@ import jakarta.persistence.Id;
 import java.util.UUID;
 
 @Entity
-public class BaseSource {
+public class BaseDemand {
   @Id
   @GeneratedValue
-  public UUID id;
+  private UUID id;
 }
