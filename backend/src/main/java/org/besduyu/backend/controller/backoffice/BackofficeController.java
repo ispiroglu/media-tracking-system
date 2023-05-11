@@ -34,8 +34,8 @@ public class BackofficeController {
 
   }
 
-  @PostMapping("/report")
-  public void postReport(@RequestBody CreateReportRequest request) {
-
-  }
+//  @PostMapping("/report")
+//  public void postReport(@RequestBody CreateReportRequest request) {
+//
+//  }
 }

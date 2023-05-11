@@ -4,5 +4,5 @@ import java.util.UUID;
 import org.besduyu.backend.domain.model.demand.ReportDemand;
 import org.springframework.data.repository.CrudRepository;
 
-interface ReportRepository extends CrudRepository<ReportDemand, UUID> {
+interface ReportDemandRepository extends CrudRepository<ReportDemand, UUID> {
 }
