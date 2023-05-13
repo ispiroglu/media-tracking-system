@@ -12,6 +12,8 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
 
 import { AuthModule } from './auth/auth.module';
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
+import { HeaderInterceptor } from "./shared/http/auth.interceptor";
 
 
 @NgModule({
@@ -28,9 +30,16 @@ import { AuthModule } from './auth/auth.module';
     ToastrModule.forRoot(),
     FooterModule,
     FixedPluginModule,
-    AuthModule
+    AuthModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HeaderInterceptor,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

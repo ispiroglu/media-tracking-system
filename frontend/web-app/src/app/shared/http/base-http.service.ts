@@ -1,6 +1,10 @@
 import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 import { Params } from "@angular/router";
 
+@Injectable({
+  providedIn: 'root'
+})
 export class BaseHttpService {
   constructor(protected httpClient: HttpClient) {}
 
@@ -38,10 +42,11 @@ export class BaseHttpService {
     });
   }
 
-  httpDelete<T>(requestUrl: string = "", headers?: HttpHeaders) {
+  httpDelete<T>(requestUrl: string = "", headers?: HttpHeaders, params?: HttpParams) {
     return this.httpClient.delete<T>(requestUrl, {
       headers,
       observe: "response",
+      params
     });
   }
 }

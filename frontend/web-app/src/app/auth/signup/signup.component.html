@@ -1,1 +1,219 @@
-<p>signup works!</p>
+<div class="wrapper justfiy-content-center">
+  <div class="row evren-center">
+    <div class="container">
+      <div class="col mx-auto">
+        <div class="title evren-center">Kayıt</div>
+        <div class="content">
+          <form *ngIf="!isCompany" [formGroup]="personalForm" (ngSubmit)="onSubmit()" >
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">İsim</span>
+                <input
+                  type="text"
+                  placeholder="İsim"
+                  formControlName="firstName"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Soyisim</span>
+                <input
+                  type="text"
+                  placeholder="Soyisim"
+                  formControlName="lastName"
+                  required
+                />
+              </div>
+
+              <div class="input-box">
+                <span class="details">Telefon Numarası</span>
+                <input
+                  type="text"
+                  placeholder="Telefon Numarası"
+                  formControlName="phoneNumber"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Doğum Yeri</span>
+                <input
+                  type="text"
+                  placeholder="Doğum Yeri"
+                  formControlName="placeOfBirth"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Doğum Tarihi</span>
+                <input
+                  type="date"
+                  placeholder="Doğum Tarihi"
+                  formControlName="birthDate"
+                  required
+                />
+              </div>
+
+              <div class="input-box">
+                <span class="details">Adres</span>
+                <input
+                  type="text"
+                  placeholder="Adres"
+                  formControlName="address"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Meslek</span>
+                <input
+                  type="text"
+                  placeholder="Meslek"
+                  formControlName="occupation"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Rapor Tipi</span>
+                <input
+                  type="text"
+                  placeholder="Rapor Tipi"
+                  formControlName="reportType"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  formControlName="email"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Şifre</span>
+                <input
+                  type="text"
+                  placeholder="Şifre"
+                  formControlName="password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" value="Hesap Oluştur" />
+            </div>
+          </form>
+
+          <form *ngIf="isCompany" [formGroup]="companyForm" (ngSubmit)="onSubmit()">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Şirket Adı</span>
+                <input
+                  type="text"
+                  placeholder="Şirket Adı"
+                  formControlName="companyName"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Şirket Tipi</span>
+                <input
+                  type="text"
+                  placeholder="Şirket Tipi"
+                  formControlName="companyType"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Yetkili Ad-Soyad</span>
+                <input
+                  type="text"
+                  placeholder="Şirket Yöneticisi Ad-Soyad"
+                  formControlName="companyManagerName"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Telefon Numarası</span>
+                <input
+                  type="text"
+                  placeholder="Telefon Numarası"
+                  formControlName="companyPhoneNumber"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Adres</span>
+                <input
+                  type="text"
+                  placeholder="Adres"
+                  formControlName="companyAddress"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Rapor Tipi</span>
+                <input
+                  type="text"
+                  placeholder="Rapor Tipi"
+                  formControlName="companyReportType"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  formControlName="email"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Şifre</span>
+                <input
+                  type="text"
+                  placeholder="Şifre"
+                  formControlName="password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" value="Hesap Oluştur" />
+            </div>
+          </form>
+        </div>
+        <div class="row">
+          <div class="gender-details">
+            <input
+              [(ngModel)]="isCompany"
+              [value]="false"
+              type="radio"
+              name="gender"
+              id="dot-1"
+            />
+            <input
+              [(ngModel)]="isCompany"
+              [value]="true"
+              type="radio"
+              name="gender"
+              id="dot-2"
+            />
+            <span class="gender-title">Üyelik Tipi</span>
+            <div class="category">
+              <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">Şahıs</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender">Şirket</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
