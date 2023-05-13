@@ -1,17 +1,16 @@
-import { LoginRequest } from './model/login-request.model';
-import { BaseHttpService } from './../http/base-http.service';
-import { Injectable } from '@angular/core';
-import { ACCESS_TOKEN, LOCALHOST_LOGIN_URL, LOCALHOST_COMPANY_REGISTER_URL, LOCALHOST_PERSONAL_REGISTER_URL } from '../constants/auth.constants';
-import { Roles } from './model/role.model';
-import { PersonalRegisterRequest } from './model/personal-register-request.model';
-import { CompanyRegisterRequest } from './model/company-register-request.model';
-import { HttpParams } from '@angular/common/http';
+import {LoginRequest} from './model/login-request.model';
+import {BaseHttpService} from '../http/base-http.service';
+import {Injectable} from '@angular/core';
+import {ACCESS_TOKEN, LOCALHOST_COMPANY_REGISTER_URL, LOCALHOST_LOGIN_URL, LOCALHOST_PERSONAL_REGISTER_URL} from '../constants/auth.constants';
+import {Roles} from './model/role.model';
+import {PersonalRegisterRequest} from './model/personal-register-request.model';
+import {CompanyRegisterRequest} from './model/company-register-request.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  loggedInRole?: Roles
+  loggedInRole?: Roles = Roles.CUSTOMER
   customerId?: string;
 
 
