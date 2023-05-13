@@ -1,27 +1,26 @@
 <div class="wrapper justfiy-content-center">
   <div class="row evren-center">
-    <div class="container">
+    <div class="mt-30 container">
       <div class="col mx-auto">
         <div class="title">Giriş</div>
         <div class="content">
-          <form action="#">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
             <div class="user-details">
               <div class="input-box">
                 <span class="details">Email</span>
-                <input type="text" placeholder="Email" required />
+                <input type="text" placeholder="Email" formControlName="email" required />
               </div>
               <div class="input-box">
                 <span class="details">Şifre</span>
-                <input type="text" placeholder="Şifre" required />
+                <input type="text" placeholder="Şifre" formControlName="password" required />
               </div>
             </div>
             <div class="button">
-              <input type="submit" value="Register" />
+              <input type="submit" value="Giriş Yap" />
             </div>
           </form>
         </div>
       </div>
     </div>
-
   </div>
 </div>

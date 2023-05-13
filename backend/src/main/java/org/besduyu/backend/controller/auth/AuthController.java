@@ -25,7 +25,7 @@ public class AuthController {
   private final CompanyCustomerService companyCustomerService;
   private final PersonalCustomerService personalCustomerService;
 
-  @PostMapping("/register/person")
+  @PostMapping("/register")
   public ResponseEntity<AuthenticationResponse> register(
       @RequestBody PersonalRegisterRequest request) {
     var user = service.register(

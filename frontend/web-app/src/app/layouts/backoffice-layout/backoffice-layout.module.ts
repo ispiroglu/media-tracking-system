@@ -9,22 +9,26 @@ import { CreateReportComponent } from './pages/report/create-report/create-repor
 import { ListReportComponent } from './pages/report/list-report/list-report.component';
 import { ListDemandComponent } from './pages/demand/list-demand/list-demand.component';
 import { ViewDemandComponent } from './pages/demand/view-demand/view-demand.component';
+import { SidebarModule } from "../../sidebar/sidebar.module";
+import { NavbarModule } from "../../shared/navbar/navbar.module";
 
 
 
 @NgModule({
-  declarations: [
-    BackofficeLayoutComponent,
-    ListSourceComponent,
-    ViewSourceComponent,
-    CreateReportComponent,
-    ListReportComponent,
-    ListDemandComponent,
-    ViewDemandComponent
-  ],
-  imports: [
-    RouterModule.forChild(BackofficeRoutes),
-    CommonModule
-  ]
+    declarations: [
+        BackofficeLayoutComponent,
+        ListSourceComponent,
+        ViewSourceComponent,
+        CreateReportComponent,
+        ListReportComponent,
+        ListDemandComponent,
+        ViewDemandComponent
+    ],
+    imports: [
+        RouterModule.forChild(BackofficeRoutes),
+        CommonModule,
+        SidebarModule,
+        NavbarModule
+    ]
 })
 export class BackofficeLayoutModule { }

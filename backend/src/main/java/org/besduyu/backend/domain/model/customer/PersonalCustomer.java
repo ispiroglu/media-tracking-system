@@ -5,16 +5,15 @@ import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import org.besduyu.backend.domain.model.enums.ReportPeriodType;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @RequiredArgsConstructor
-@NoArgsConstructor
 @Builder
 public class PersonalCustomer extends BaseCustomer {
 
@@ -26,5 +25,5 @@ public class PersonalCustomer extends BaseCustomer {
   public Date birthDate;
   public String address;
   public String occupation;
-  public String reportType;
+  public ReportPeriodType reportType;
 }

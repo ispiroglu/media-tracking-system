@@ -5,6 +5,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { BackofficeLayoutComponent } from './layouts/backoffice-layout/backoffice-layout.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { CustomerLayoutComponent } from './layouts/customer-layout/customer-layout.component';
+import { adminGuard, authGuard, backofficeGuard, customerGuard } from './shared/guard/auth.guard';
 
 export const AppRoutes: Routes = [
   {
@@ -21,6 +22,7 @@ export const AppRoutes: Routes = [
     component: SignupComponent
   },
   {
+    canActivate: [authGuard, adminGuard],
     path: 'admin',
     component: AdminLayoutComponent,
     children: [{
@@ -29,6 +31,7 @@ export const AppRoutes: Routes = [
     }]
   },
   {
+    canActivate: [authGuard, backofficeGuard],
     path: 'backoffice',
     component: BackofficeLayoutComponent,
     children: [{
@@ -37,6 +40,7 @@ export const AppRoutes: Routes = [
     }]
   },
   {
+    canActivate: [authGuard, customerGuard],
     path: 'customer',
     component: CustomerLayoutComponent,
     children: [{

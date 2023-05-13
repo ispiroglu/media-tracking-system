@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.besduyu.backend.domain.model.enums.SourceType;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -11,4 +12,5 @@ import lombok.Setter;
 @Setter
 public class CreateSourceRequest {
   private String name;
+  private SourceType sourceType;
 }

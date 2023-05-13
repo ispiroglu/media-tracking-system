@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../shared/auth/auth.service";
 import {Roles} from "../shared/auth/model/role.model";
+import { take, tap } from 'rxjs';
 
 
 export interface RouteInfo {
@@ -61,7 +62,9 @@ export class SidebarComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    switch (this.authService.loggedInRole) {
+    let role = this.authService.loggedInRole;
+
+    switch (role) {
       case Roles.ADMIN:
         ROUTES = ADMIN_ROUTES;
         this.menuItems = ADMIN_ROUTES.filter(menuItem => menuItem);

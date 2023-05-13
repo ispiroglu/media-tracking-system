@@ -2,6 +2,7 @@ package org.besduyu.backend.domain.dto.request;
 
 import java.util.Date;
 import lombok.Data;
+import org.besduyu.backend.domain.model.enums.ReportPeriodType;
 
 @Data
 public class PersonalRegisterRequest {
@@ -15,5 +16,5 @@ public class PersonalRegisterRequest {
   private Date birthDate;
   private String address;
   private String occupation;
-  private String reportType;
+  private ReportPeriodType reportType;
 }

@@ -5,13 +5,20 @@ import {ACCESS_TOKEN, LOCALHOST_COMPANY_REGISTER_URL, LOCALHOST_LOGIN_URL, LOCAL
 import {Roles} from './model/role.model';
 import {PersonalRegisterRequest} from './model/personal-register-request.model';
 import {CompanyRegisterRequest} from './model/company-register-request.model';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  loggedInRole?: Roles = Roles.CUSTOMER
-  customerId?: string;
+  private _customerId$ = new BehaviorSubject<string>(null);
+  customerId = null;
+
+  private _isLoggedIn$ = new BehaviorSubject<boolean>(false);
+  isLoggedIn = true;
+
+  private _loggedInRole$ = new BehaviorSubject<Roles>(null);
+  loggedInRole = Roles.ADMIN;
 
 
   constructor(private http: BaseHttpService) { }
@@ -21,6 +28,9 @@ export class AuthService {
       .subscribe(
         (response) => {
           this.setTokenToLocalStorage(response.body);
+          this.customerId = response.body.customerId;
+          this.loggedInRole = response.body.loggedInRole;
+          this.isLoggedIn = true
         }
       )
   }
