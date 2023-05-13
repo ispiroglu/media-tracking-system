@@ -21,15 +21,14 @@ public class AuthService {
   private final AuthenticationManager authenticationManager;
   private final JwtService jwtService;
 
-  public AuthenticationResponse register(RegisterRequest request) {
+  public User register(RegisterRequest request) {
     var user = User.builder()
         .email(request.getEmail())
         .password(passwordEncoder.encode(request.getPassword()))
+        .role(request.getRole())
         .build();
 
-    repository.save(user);
-    String token = jwtService.generateToken(user);
-    return AuthenticationResponse.builder().token(token).build();
+    return repository.save(user);
   }
 
   public AuthenticationResponse login(LoginRequest request) {
@@ -43,6 +42,11 @@ public class AuthService {
         .orElseThrow();
     String token = jwtService.generateToken(user);
 
+    return  AuthenticationResponse.builder().token(token).build();
+  }
+
+  public AuthenticationResponse generateToken(User user) {
+    String token = jwtService.generateToken(user);
     return  AuthenticationResponse.builder().token(token).build();
   }
 }
