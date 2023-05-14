@@ -18,7 +18,7 @@ export class AuthService {
   isLoggedIn = true;
 
   private _loggedInRole$ = new BehaviorSubject<Roles>(null);
-  loggedInRole = Roles.ADMIN;
+  loggedInRole = Roles.BACKOFFICE;
 
 
   constructor(private http: BaseHttpService) { }

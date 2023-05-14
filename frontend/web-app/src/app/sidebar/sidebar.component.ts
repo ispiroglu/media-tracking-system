@@ -28,8 +28,8 @@ const CUSTOMER_ROUTES: RouteInfo[] = [
 const BACKOFFICE_ROUTES: RouteInfo[] = [
   {path: '/dashboard', title: 'Dashboard', icon: 'nc-bank', class: ''},
   {path: '/backoffice/demand', title: 'Talepler', icon: 'nc-diamond', class: ''},
-  {path: '/backoffice/report', title: 'Raporlar', icon: 'nc-diamond', class: ''},
-  {path: '/backoffice/sources', title: 'Kaynaklar', icon: 'nc-diamond', class: ''},
+  // {path: '/backoffice/report', title: 'Raporlar', icon: 'nc-diamond', class: ''},
+  {path: '/backoffice/source', title: 'Kaynaklar', icon: 'nc-diamond', class: ''},
   // { path: '/maps',          title: 'Maps',              icon:'nc-pin-3',      class: '' },
   // { path: '/notifications', title: 'Notifications',     icon:'nc-bell-55',    class: '' },
   // { path: '/user',          title: 'User Profile',      icon:'nc-single-02',  class: '' },
@@ -40,7 +40,7 @@ const BACKOFFICE_ROUTES: RouteInfo[] = [
 
 const ADMIN_ROUTES: RouteInfo[] = [
   {path: '/dashboard', title: 'Dashboard', icon: 'nc-bank', class: ''},
-  {path: '/admin/sources', title: 'Kaynaklar', icon: 'nc-diamond', class: ''},
+  {path: '/admin/source', title: 'Kaynaklar', icon: 'nc-diamond', class: ''},
   // { path: '/maps',          title: 'Maps',              icon:'nc-pin-3',      class: '' },
   // { path: '/notifications', title: 'Notifications',     icon:'nc-bell-55',    class: '' },
   // { path: '/user',          title: 'User Profile',      icon:'nc-single-02',  class: '' },

@@ -1,1 +1,97 @@
-<p>view-demand works!</p>
+<form [formGroup]="demandForm">
+  <div class="row">
+    <span class="col-sm-6 col-xs-12 form-group">
+      <label for="name">Talep Adı</label>
+      <input
+        type="text"
+        id="demandName"
+        class="form-control"
+        name="demandName"
+        placeholder="Talep Adı"
+        formControlName="name"
+      />
+    </span>
+    <span class="col-sm-6 col-xs-12 form-group">
+      <label for="website">Son Gün</label>
+      <input
+        type="text"
+        id="deadline"
+        class="form-control"
+        name="deadline"
+        placeholder="Son Gün"
+        formControlName="deadline"
+      />
+    </span>
+  </div>
+  <div class="row">
+    <span class="col-sm-6 col-xs-12 form-group">
+      <label for="website">Rapor Tipi</label>
+      <input
+        type="text"
+        id="reportPeriodType"
+        class="form-control"
+        name="reportPeriodType"
+        placeholder="Rapor Tipi"
+        formControlName="reportPeriodType"
+      />
+    </span>
+    <span class="col-sm-6 col-xs-12 form-group">
+      <label for="website">Durum</label>
+      <input
+        type="text"
+        id="active"
+        class="form-control"
+        name="active"
+        placeholder="Durum"
+        formControlName="active"
+      />
+    </span>
+  </div>
+  <div class="row">
+    <span class="col-sm-6 col-xs-12 form-group">
+      <label for="website">Oluşturulma Tarihi</label>
+      <input
+        type="text"
+        id="reportPeriodType"
+        class="form-control"
+        name="reportPeriodType"
+        placeholder="Rapor Tipi"
+        formControlName="createdAt"
+      />
+    </span>
+    <span class="col-sm-6 col-xs-12 form-group">
+      <label for="website">Son Düzenlenme Tarihi</label>
+      <input
+        type="text"
+        id="active"
+        class="form-control"
+        name="active"
+        placeholder="Durum"
+        formControlName="lastModifiedDate"
+      />
+    </span>
+  </div>
+  <div class="row">
+    <span class="col-sm-12 col-xs-12 form-group">
+      <label for="address">Açıklama</label>
+      <input
+        type="text"
+        id="description"
+        class="form-control"
+        name="description"
+        placeholder="Açıklama"
+        formControlName="description"
+      />
+    </span>
+  </div>
+  <div class="row justify-content-center">
+    <button
+      type="submit"
+      class="btn btn-success mt-5 col-5"
+      style="margin-left: 10px"
+      mat-raised-button (click)="openDialog()"
+    >
+      Çözümle
+    </button>
+  </div>
+</form>

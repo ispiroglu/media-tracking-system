@@ -1,0 +1,6 @@
+enum SourceType {
+  TV = 'TV',
+  INTERNET = "INTERNET",
+  MAGAZINE = "MAGAZINE",
+  NEWSPAPER = "NEWSPAPER"
+};

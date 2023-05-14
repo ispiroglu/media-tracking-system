@@ -1,0 +1,39 @@
+<form [formGroup]="reportForm">
+  <div class="row">
+    <span class="col-sm-6 col-xs-12 form-group">
+      <label for="name">Rapor Adı</label>
+      <input
+        type="text"
+        id="demandName"
+        class="form-control"
+        name="demandName"
+        placeholder="Talep Adı"
+        formControlName="name"
+      />
+    </span>
+    <span class="col-sm-6 col-xs-12 form-group">
+      <label for="website">Oluşturulma Tarihi</label>
+      <input
+        type="text"
+        id="deadline"
+        class="form-control"
+        name="deadline"
+        placeholder="Son Gün"
+        formControlName="createdAt"
+      />
+    </span>
+  </div>
+  <div class="row">
+    <span class="col-sm-12 col-xs-12 form-group">
+      <label for="address">Açıklama</label>
+      <input
+        type="text"
+        id="description"
+        class="form-control"
+        name="description"
+        placeholder="Açıklama"
+        formControlName="description"
+      />
+    </span>
+  </div>
+</form>

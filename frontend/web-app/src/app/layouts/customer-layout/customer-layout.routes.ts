@@ -3,6 +3,7 @@ import {ListDemandComponent} from "./pages/demand/list-demand/list-demand.compon
 import {CreateDemandComponent} from "./pages/demand/create-demand/create-demand.component";
 import {EditDemandComponent} from "./pages/demand/edit-demand/edit-demand.component";
 import { ListReportComponent } from "./pages/report/list-report/list-report.component";
+import { ViewReportComponent } from "./pages/report/view-report/view-report.component";
 
 export const CustomerLayoutRoutes: Routes = [
   {
@@ -20,5 +21,9 @@ export const CustomerLayoutRoutes: Routes = [
   {
     path: 'report',
     component: ListReportComponent
+  },
+  {
+    path: 'report/:id',
+    component: ViewReportComponent
   }
 ]

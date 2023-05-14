@@ -1,1 +1,48 @@
-<p>create-demand works!</p>
+<form [formGroup]="demandForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <span class="col-sm-6 col-xs-12 form-group">
+      <label for="name">Talep Adı</label>
+      <input
+        type="text"
+        id="demandName"
+        class="form-control"
+        name="demandName"
+        placeholder="Talep Adı"
+        formControlName="name"
+      />
+    </span>
+    <span class="col-sm-6 col-xs-12 form-group">
+      <label for="website">Rapor Tipi</label>
+      <input
+        type="text"
+        id="reportPeriodType"
+        class="form-control"
+        name="reportPeriodType"
+        placeholder="Rapor Tipi"
+        formControlName="reportPeriodType"
+      />
+    </span>
+  </div>
+  <div class="row">
+    <span class="col-sm-12 col-xs-12 form-group">
+      <label for="address">Açıklama</label>
+      <input
+        type="text"
+        id="description"
+        class="form-control"
+        name="description"
+        placeholder="Açıklama"
+        formControlName="description"
+      />
+    </span>
+  </div>
+  <div class="row justify-content-center">
+    <button
+      type="submit"
+      class="btn btn-primary mt-5 col-5"
+      style="margin-left: 10px"
+    >
+      Onayla
+    </button>
+  </div>
+</form>

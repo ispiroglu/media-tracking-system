@@ -7,8 +7,9 @@ import { CreateDemandComponent } from './pages/demand/create-demand/create-deman
 import { ListDemandComponent } from './pages/demand/list-demand/list-demand.component';
 import { EditDemandComponent } from './pages/demand/edit-demand/edit-demand.component';
 import { SidebarModule } from "../../sidebar/sidebar.module";
-import { NavbarModule } from "../../shared/navbar/navbar.module";
 import { ListReportComponent } from './pages/report/list-report/list-report.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ViewReportComponent } from './pages/report/view-report/view-report.component';
 
 
 
@@ -19,12 +20,13 @@ import { ListReportComponent } from './pages/report/list-report/list-report.comp
         ListDemandComponent,
         EditDemandComponent,
         ListReportComponent,
+        ViewReportComponent,
     ],
     imports: [
         RouterModule.forChild(CustomerLayoutRoutes),
         CommonModule,
         SidebarModule,
-        NavbarModule
+        ReactiveFormsModule
     ]
 })
 export class CustomerLayoutModule { }

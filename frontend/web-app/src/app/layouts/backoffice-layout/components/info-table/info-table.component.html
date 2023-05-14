@@ -1,0 +1,12 @@
+<mat-dialog-content>
+  <ng-container *ngFor="let info of infoTable">
+    <mat-expansion-panel hideToggle class="mt-2">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ info.name }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>{{ info.description }}</p>
+    </mat-expansion-panel>
+  </ng-container>
+</mat-dialog-content>

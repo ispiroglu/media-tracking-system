@@ -1,1 +1,37 @@
-<p>list-source works!</p>
+<div class="card">
+  <div class="card-header card-header-danger">
+      <h4 class="card-title ">Kaynaklar</h4>
+      <p class="card-category">Kaynaklar </p>
+  </div>
+  <div class="card-body">
+      <div class="table-responsive">
+          <table class="table">
+
+              <thead class=" text-primary">
+              <th>Isim</th>
+              <th>Website</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Address</th>
+              <th>Kaynak Tipi</th>
+              <th>Oluşturulma Tarihi</th>
+              <th>Güncellenme Tarihi</th>
+              </thead>
+
+              <tbody>
+              <tr *ngFor="let source of sourceList; let i = index">
+                <td> {{ source.name }}</td>
+                <td> {{ source.website }}</td>
+                <td> {{ source.email }}</td>
+                <td> {{ source.phoneNumber }}</td>
+                <td> {{ source.address }}</td>
+                <td> {{ source.sourceType }} </td>
+                <td> {{ source.createdAt }} </td>
+                <td> {{ source.lastModifiedDate }} </td>
+                <td> <button class="btn btn-primary" (click)="onClickView(source.id)"> View </button> </td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

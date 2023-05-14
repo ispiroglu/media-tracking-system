@@ -1,1 +1,25 @@
-<p>list-report works!</p>
+<div class="card">
+  <div class="card-header card-header-danger">
+      <h4 class="card-title ">Rapor Talepleri</h4>
+      <p class="card-category">Rapor Talepleri</p>
+  </div>
+  <div class="card-body">
+      <div class="table-responsive">
+          <table class="table">
+
+              <thead class=" text-primary">
+              <th>Isim</th>
+              <th>Oluşturulma Tarihi</th>
+              </thead>
+
+              <tbody>
+              <tr *ngFor="let report of reportList; let i = index">
+                <td> {{ report.name }}</td>
+                <td> {{ report.createdAt }} </td>
+                <td> <button class="btn btn-primary" (click)="onClickView(report.id)"> İncele </button> </td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
