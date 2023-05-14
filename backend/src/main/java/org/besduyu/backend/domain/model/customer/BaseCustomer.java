@@ -6,13 +6,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.MappedSuperclass;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 import lombok.Data;
-import org.besduyu.backend.domain.model.demand.ReportDemand;
 import org.besduyu.backend.domain.model.user.User;
 import org.springframework.data.annotation.CreatedDate;
 

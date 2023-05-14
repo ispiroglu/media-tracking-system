@@ -46,4 +46,8 @@ public class AdminService {
   public List<Info> getAllInfos() {
     return infoService.getAllInfos();
   }
+
+  public void deleteSource(UUID id) {
+    sourceService.deleteSource(id);
+  }
 }

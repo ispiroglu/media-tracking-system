@@ -17,8 +17,12 @@ public class SourceService {
 
   public void createSource(CreateSourceRequest request) {
     var source = Source.builder()
-        .sourceType(request.getSourceType())
         .name(request.getName())
+        .website(request.getWebsite())
+        .email(request.getEmail())
+        .phoneNumber(request.getPhoneNumber())
+        .address(request.getAddress())
+        .sourceType(request.getSourceType())
         .build();
 
     sourceRepository.save(source);
@@ -48,5 +52,9 @@ public class SourceService {
 
     source.getInfoList().add(info);
     sourceRepository.save(source);
+  }
+
+  public void deleteSource(UUID id) {
+    sourceRepository.deleteById(id);
   }
 }

@@ -1,8 +1,10 @@
 package org.besduyu.backend.repository.demand;
 
 import java.util.UUID;
-import org.besduyu.backend.domain.model.demand.ReportDemand;
+import org.besduyu.backend.domain.model.demand.Demand;
 import org.springframework.data.repository.CrudRepository;
 
-public interface ReportDemandRepository extends CrudRepository<ReportDemand, UUID> {
+public interface DemandRepository extends CrudRepository<Demand, UUID> {
+
+  Iterable<Demand> findDemandsByActiveTrue();
 }

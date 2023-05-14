@@ -6,7 +6,7 @@ import lombok.Getter;
 public enum ReportPeriodType {
   DAILY("DAILY"),
   WEEKLY("WEEKLY"),
-  MONTHLY("CUSTOMER");
+  MONTHLY("MONTHLY");
 
   private final String type;
   ReportPeriodType(String type) {

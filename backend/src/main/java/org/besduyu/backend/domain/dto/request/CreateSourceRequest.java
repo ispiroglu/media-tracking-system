@@ -12,5 +12,9 @@ import org.besduyu.backend.domain.model.enums.SourceType;
 @Setter
 public class CreateSourceRequest {
   private String name;
+  private String website;
+  private String address;
+  private String email;
+  private String phoneNumber;
   private SourceType sourceType;
 }
